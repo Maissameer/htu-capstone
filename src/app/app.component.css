@@ -1,3 +1,5 @@
+/* @import '~ngx-sharebuttons/themes/default'; */
+
 .mat-toolbar-row {
     display: flex;
     justify-content: space-between;
@@ -14,4 +16,14 @@
     }
    .link{
       text-decoration: none;
+    }
+   .mat-toolbar.mat-primary {
+    background: #3f51b5;
+    color: #fff;
+    justify-content: center;
+}
+
+    .pt-5{
+      padding: 0 !important;
+      
     }
