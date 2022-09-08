@@ -86,7 +86,7 @@ export class AdminStartupsComponent implements OnInit {
    verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   done(){
-    this._snackBar.open('Cannonball!!', 'Splash', {
+    this._snackBar.open('Your request has been sent', 'Done', {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });  }

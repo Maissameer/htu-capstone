@@ -36,6 +36,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatCommonModule} from '@angular/material/core';
 
 const routes: Route[] = [
   { path: '', redirectTo:'/landing-page', pathMatch: 'full' },
@@ -86,7 +88,10 @@ const routes: Route[] = [
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
+    ShareButtonsModule,
     ShareIconsModule,
+    MatSnackBarModule,
+    MatCommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

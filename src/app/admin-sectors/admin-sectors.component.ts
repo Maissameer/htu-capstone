@@ -1,6 +1,6 @@
 // import { sectors } from './../landing-page/landing-page.component';
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, Validators} from '@angular/forms';
+ import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {FloatLabelType} from '@angular/material/form-field';
 import {MatSnackBar, MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,} from '@angular/material/snack-bar';
@@ -68,7 +68,7 @@ export class AdminSectorsComponent implements OnInit {
    verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   done(){
-    this._snackBar.open('Cannonball!!', 'Splash', {
+    this._snackBar.open('Your request has been sent', 'Done', {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });
