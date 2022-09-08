@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {FloatLabelType} from '@angular/material/form-field';
+import {MatSnackBar, MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,} from '@angular/material/snack-bar';
 
 export interface sectorOption{
   name:string;
@@ -25,7 +27,7 @@ export class AdminStartupsComponent implements OnInit {
     floatLabel: this.floatLabelControl,
   });
 
-  constructor(private fb : FormBuilder) {}
+  constructor(private fb : FormBuilder,private _snackBar: MatSnackBar) {}
 
   getFloatLabelValue(): FloatLabelType {
     return this.floatLabelControl.value || 'auto';
@@ -80,7 +82,12 @@ export class AdminStartupsComponent implements OnInit {
     return this.Options.controls.category;
    }
 
+   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+   verticalPosition: MatSnackBarVerticalPosition = 'top';
+
   done(){
-    alert('Your request is waiting the approval');
-  }
+    this._snackBar.open('Cannonball!!', 'Splash', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+    });  }
 }
