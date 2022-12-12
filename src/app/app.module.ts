@@ -88,7 +88,6 @@ const routes: Route[] = [
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
-    ShareButtonsModule,
     ShareIconsModule,
     MatSnackBarModule,
     MatCommonModule,
