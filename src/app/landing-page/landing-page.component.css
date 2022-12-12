@@ -78,3 +78,11 @@ a{
 .cat4{
   background-color: #EFE7BC;
 }
+
+@media screen and (max-width: 720px) {
+  .container{
+    margin: 10% auto;
+    /* display: grid; */
+    column-count: 1;      
+}
+}
